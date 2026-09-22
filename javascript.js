@@ -94,6 +94,9 @@ function playGame() {
 
     // Play five rounds
     for (let i = 0; i < 5; i++) {
+        // Display the round number
+        console.log('Round ' + (i + 1) + ' of 5') 
+
         // Get the computer's choice
         computerChoice = getComputerChoice();
 
