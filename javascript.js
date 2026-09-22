@@ -62,7 +62,16 @@ function playGame() {
 
     };
 
-    function getComputerChoice();
+    function getComputerChoice() {
+        let randomNum = Math.random() * 3;
+        if (randomNum >= 0 && randomNum < 1) {
+            return 'ROCK';
+        } else if (randomNum >= 1 && randomNum < 2) {
+            return 'PAPER';
+        } else {
+            return 'SCISSORS';
+        };
+    };
 
     for (let i = 0; i < 5; i++) {
 
