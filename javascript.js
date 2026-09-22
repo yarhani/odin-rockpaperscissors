@@ -50,7 +50,6 @@ FUNCTION playGame()
     END IF
 END FUNCTION
 
-
 playGame()
 */
 
@@ -117,11 +116,11 @@ function playGame() {
 
     // Decide who wins the game
     if (userScore > computerScore) {
-
+        console.log('You win the best of 5!')
     } else if (userScore < computerScore) {
-
+        console.log('You lose the best of 5!')
     } else {
-
+        console.log('Nobody wins the best of 5!')
     };
 };
 
