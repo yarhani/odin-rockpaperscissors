@@ -109,6 +109,11 @@ function playGame() {
             console.log('Invalid input, please type ROCK, PAPER, or SCISSORS')
             userChoice = prompt('Rock, Paper, Scissors...').toUpperCase().trim();
         };
+        // Print the user's choice
+        console.log('You played: ' + userChoice)
+
+        // Print the computer's choice
+        console.log('The computer played: ' + computerChoice)
 
         // Get the result of the round
         playRound(userChoice, computerChoice);
