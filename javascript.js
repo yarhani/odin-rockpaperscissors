@@ -57,7 +57,10 @@ playGame()
 function playGame() {
     let userScore = 0;
     let computerScore = 0;
+    let userChoice;
+    let computerChoice;
 
+    // FUNCTION to decide who wins the round
     function playRound(userChoice, computerChoice) {
         function beatenBy(choiceA, choiceB) {
             return (
@@ -78,6 +81,7 @@ function playGame() {
         };
     };
 
+    // FUNCTION to decide the computer's choice
     function getComputerChoice() {
         let randomNum = Math.random() * 3;
         if (randomNum >= 0 && randomNum < 1) {
@@ -89,10 +93,29 @@ function playGame() {
         };
     };
 
+    // Play five rounds
     for (let i = 0; i < 5; i++) {
+        // Get the computer's choice
+        computerChoice = getComputerChoice();
 
+        // Ask for the user's choice
+        userChoice = prompt('Rock, Paper, Scissors...').toUpperCase.trim();
+
+        // Make sure the user's input is valid before comparing with the computer's input
+        while (
+            userChoice !== 'ROCK' &&
+            userChoice !== 'PAPER' &&
+            userChoice !== 'SCISSORS'
+        ) {
+            console.log('Invalid input, please type ROCK, PAPER, or SCISSORS')
+            userChoice = prompt('Rock, Paper, Scissors...').toUpperCase.trim();
+        };
+
+        // Get the result of the round
+        playRound(userChoice, computerChoice);
     };
 
+    // Decide who wins the game
     if (userScore > computerScore) {
 
     } else if (userScore < computerScore) {
