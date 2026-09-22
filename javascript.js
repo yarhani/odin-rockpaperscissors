@@ -59,7 +59,23 @@ function playGame() {
     let computerScore = 0;
 
     function playRound(userChoice, computerChoice) {
+        function beatenBy(choiceA, choiceB) {
+            return (
+                (choiceA === 'ROCK' && choiceB === 'PAPER') || 
+                (choiceA === 'PAPER' && choiceB === 'SCISSORS') || 
+                (choiceA === 'SCISSORS' && choiceB === 'ROCK') 
+            );
+        };
 
+        if (beatenBy(userChoice,computerChoice)) {
+            console.log('You win this round!')
+            userScore++;
+        } else if (beatenBy(computerChoice,userChoice)) {
+            console.log('You lose this round!')
+            computerScore++;
+        } else {
+            console.log('This round is a draw!')
+        };
     };
 
     function getComputerChoice() {
