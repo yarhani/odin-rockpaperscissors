@@ -1,6 +1,6 @@
 /* 
 FUNCTION playGame()
-    CREATE userScore and computerScore and SET to 0
+    CREATE userScore and computerScore and SET to 
 
     FUNCTION playRound(userChoice, computerChoice)
         IF userChoice beats computerChoice
@@ -24,7 +24,7 @@ FUNCTION playGame()
             RETURN 'SCISSORS'
     END FUNCTION
 
-    FOR i = 1 to 5      
+    FOR i = 0 to 4      
         SET computerChoice TO getComputerChoice()
 
         PROMPT for userChoice
@@ -53,3 +53,28 @@ END FUNCTION
 
 playGame()
 */
+
+function playGame() {
+    let userScore = 0;
+    let computerScore = 0;
+
+    function playRound(userChoice, computerChoice) {
+
+    };
+
+    function getComputerChoice();
+
+    for (let i = 0; i < 5; i++) {
+
+    };
+
+    if (userScore > computerScore) {
+
+    } else if (userScore < computerScore) {
+
+    } else {
+
+    };
+};
+
+playGame();
