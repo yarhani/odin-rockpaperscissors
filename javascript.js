@@ -69,10 +69,10 @@ function playGame() {
             );
         };
 
-        if (beatenBy(userChoice,computerChoice)) {
+        if (beatenBy(computerChoice, userChoice)) {
             console.log('You win this round!')
             userScore++;
-        } else if (beatenBy(computerChoice,userChoice)) {
+        } else if (beatenBy(userChoice, computerChoice)) {
             console.log('You lose this round!')
             computerScore++;
         } else {
