@@ -98,8 +98,7 @@ function playGame() {
         computerChoice = getComputerChoice();
 
         // Ask for the user's choice
-        userChoice = prompt('Rock, Paper, Scissors...');
-        userChoice = userChoice.toUpperCase.trim();
+        userChoice = prompt('Rock, Paper, Scissors...').toUpperCase().trim();
 
         // Make sure the user's input is valid before comparing with the computer's input
         while (
@@ -108,8 +107,7 @@ function playGame() {
             userChoice !== 'SCISSORS'
         ) {
             console.log('Invalid input, please type ROCK, PAPER, or SCISSORS')
-            userChoice = prompt('Rock, Paper, Scissors...');
-            userChoice = userChoice.toUpperCase.trim();
+            userChoice = prompt('Rock, Paper, Scissors...').toUpperCase().trim();
         };
 
         // Get the result of the round
