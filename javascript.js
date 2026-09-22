@@ -130,6 +130,9 @@ function playGame() {
     } else {
         console.log('Nobody wins the best of 5!')
     };
+
+    // Print final scores
+    console.log('You won ' + userScore + ' rounds, the computer won ' + computerScore + ' rounds.')
 };
 
 playGame();
